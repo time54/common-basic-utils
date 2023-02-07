@@ -1,0 +1,24 @@
+{
+  "name": "common-basic-utils",
+  "version": "1.0.0",
+  "description": "基础函数库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/time54/common-basic-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/time54/common-basic-utils/issues"
+  },
+  "homepage": "https://github.com/time54/common-basic-utils#readme",
+  "devDependencies": {
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
