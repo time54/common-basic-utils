@@ -2,7 +2,9 @@
   "name": "common-basic-utils",
   "version": "1.0.0",
   "description": "基础函数库",
-  "main": "dist/index.js",
+  "main": "dist/index.umd.js",
+  "common": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "test": "jest"
   },
