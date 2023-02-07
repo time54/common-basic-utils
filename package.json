@@ -2,7 +2,7 @@
   "name": "common-basic-utils",
   "version": "1.0.0",
   "description": "基础函数库",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/time54/common-basic-utils#readme",
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "rollup": "^2.32.0",
+    "rollup-plugin-json": "^4.0.0",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
   }
