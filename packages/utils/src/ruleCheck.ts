@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-03-16 01:26:09
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-01-17 01:37:17
+ * @LastEditTime: 2025-04-09 13:40:25
  * @Description: 规则校验类
  */
 const eleven = 11;
@@ -18,6 +18,7 @@ export function validateIDCard(idCard: string): boolean {
   // 正则表达式匹配身份证号码格式
   const pattern = /^[1-9]\d{5}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2]\d|3[0-1])\d{3}(\d|X)$/;
   if (!pattern.test(idCard)) {
+    console.log('Pattern mismatch:', idCard);
     return false;
   }
   // 获取身份证号码中的各个数字和最后一位校验码
@@ -33,6 +34,7 @@ export function validateIDCard(idCard: string): boolean {
   }
   const codeIndex = sum % eleven;
   // 检查校验码是否匹配
+  console.log('Calculated code:', codes[codeIndex], 'Expected code:', lastCode);
   return lastCode === codes[codeIndex];
 }
 

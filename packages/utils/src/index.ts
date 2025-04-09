@@ -2,10 +2,11 @@
  * @Author: taojinchao
  * @Date: 2023-02-07 14:34:51
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-01-17 01:38:19
+ * @LastEditTime: 2025-04-09 14:21:48
  * @Description: 基础类集成导出
  */
 
+export * from './bridge';
 export * from './cryptoJS';
 export * from './dataFormatConversion';
 export * from './formatDate';
