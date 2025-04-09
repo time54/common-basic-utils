@@ -1,5 +1,5 @@
 {
-    "include": [
-        "packages/**/src"
+    "include": [ // 控制 TypeScript 编译器处理哪些文件
+        "packages/**/*.ts"
     ]
 }
