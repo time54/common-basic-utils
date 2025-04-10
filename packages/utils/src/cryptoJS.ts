@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-05-22 16:22:04
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-03-30 15:11:45
+ * @LastEditTime: 2025-04-09 20:41:52
  * @Description: 加解密类
  */
 
@@ -30,26 +30,35 @@ function loadJS(callback: any, errorCallback: any) {
  * @param {string} vectorIv 向量iv
  * @param {string} data 要加密的数据
  */
-export function encryptAES(data: string, publicKey: string, vectorIv: string, mode: AesModeType = AesModeType.CBC, padding: AesPaddingType = AesPaddingType.PKCS7) {
+export function encryptAES(
+  data: string,
+  publicKey: string,
+  vectorIv: string,
+  mode: AesModeType = AesModeType.CBC,
+  padding: AesPaddingType = AesPaddingType.PKCS7
+) {
   return new Promise((resolve, reject) => {
-    loadJS(() => {
-      const key = window.CryptoJS.enc.Utf8.parse(publicKey);
-      const iv = window.CryptoJS.enc.Utf8.parse(vectorIv);
-      try {
-        const encryptData = window.CryptoJS.AES.encrypt(data, key, {
-          iv,
-          mode: window.CryptoJS.mode[mode],
-          padding: window.CryptoJS.pad[padding],
-        });
-        const encryptedMessage = encryptData.toString();
-        resolve(encryptedMessage);
-      } catch (error) {
-        reject(error);
+    loadJS(
+      () => {
+        const key = window.CryptoJS.enc.Utf8.parse(publicKey);
+        const iv = window.CryptoJS.enc.Utf8.parse(vectorIv);
+        try {
+          const encryptData = window.CryptoJS.AES.encrypt(data, key, {
+            iv,
+            mode: window.CryptoJS.mode[mode],
+            padding: window.CryptoJS.pad[padding]
+          });
+          const encryptedMessage = encryptData.toString();
+          resolve(encryptedMessage);
+        } catch (error) {
+          reject(error);
+        }
+      },
+      () => {
+        // 在 loadJS 失败时也调用 reject
+        reject(new Error('js脚本加载出错'));
       }
-    }, () => {
-      // 在 loadJS 失败时也调用 reject
-      reject(new Error('js脚本加载出错'));
-    });
+    );
   });
 }
 
@@ -59,25 +68,34 @@ export function encryptAES(data: string, publicKey: string, vectorIv: string, mo
  * @param {string} vectorIv 向量iv
  * @param {string} data 要解密的数据
  */
-export function decryptAES(data: string, publicKey: string, vectorIv: string,mode: AesModeType = AesModeType.CBC, padding: AesPaddingType = AesPaddingType.PKCS7) {
+export function decryptAES(
+  data: string,
+  publicKey: string,
+  vectorIv: string,
+  mode: AesModeType = AesModeType.CBC,
+  padding: AesPaddingType = AesPaddingType.PKCS7
+) {
   return new Promise((resolve, reject) => {
-    loadJS(() => {
-      const key = window.CryptoJS.enc.Utf8.parse(publicKey);
-      const iv = window.CryptoJS.enc.Utf8.parse(vectorIv);
-      try {
-        const decryptedData = window.CryptoJS.AES.decrypt(data, key, {
-          iv,
-          mode: window.CryptoJS.mode[mode],
-          padding: window.CryptoJS.pad[padding],
-        });
-        const decryptedMessage = decryptedData.toString(window.CryptoJS.enc.Utf8);
-        resolve(decryptedMessage);
-      } catch (error) {
-        reject(error);
+    loadJS(
+      () => {
+        const key = window.CryptoJS.enc.Utf8.parse(publicKey);
+        const iv = window.CryptoJS.enc.Utf8.parse(vectorIv);
+        try {
+          const decryptedData = window.CryptoJS.AES.decrypt(data, key, {
+            iv,
+            mode: window.CryptoJS.mode[mode],
+            padding: window.CryptoJS.pad[padding]
+          });
+          const decryptedMessage = decryptedData.toString(window.CryptoJS.enc.Utf8);
+          resolve(decryptedMessage);
+        } catch (error) {
+          reject(error);
+        }
+      },
+      () => {
+        // 在 loadJS 失败时也调用 reject
+        reject(new Error('js脚本加载出错'));
       }
-    }, () => {
-      // 在 loadJS 失败时也调用 reject
-      reject(new Error('js脚本加载出错'));
-    });
+    );
   });
 }

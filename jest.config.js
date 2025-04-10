@@ -4,14 +4,12 @@
  * @LastEditors: taojinchao
  * @LastEditTime: 2024-03-30 00:34:54
  * @Description: 单元测试配置文件
-*/
+ */
 module.exports = {
-    transform: {
-      '^.+\\.tsx?$': 'ts-jest' // ts文件使用ts-jest
-    }
-}
-
-
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest' // ts文件使用ts-jest
+  }
+};
 
 // jest.config.js 常规配置
 
@@ -45,12 +43,12 @@ module.exports = {
 //     '@king-fisher/apis': '<rootDir>/packages/apis/src/index.ts',
 //     '@hummer/hummer-front': '<rootDir>/__mocks__/hummer-front/index.ts',
 //   },
-//   testMatch: [                  // 测试文件匹配【在__tests__目录下*.test.{ts,tsx}的文件】  
+//   testMatch: [                  // 测试文件匹配【在__tests__目录下*.test.{ts,tsx}的文件】
 //     TEST_API ? `**/${TEST_API}/__tests__/*.test.{ts,tsx}` : '**/__tests__/**/*.test.{ts,tsx}',
 //   ],
 //   collectCoverage: !TEST_API,               // 是否应该收集测试覆盖率，默认值：false
 //   coverageDirectory: '<rootDir>/coverage',  // 测试覆盖率输出的目录
-//   collectCoverageFrom: [                    // 从哪里收集测试覆盖率  
+//   collectCoverageFrom: [                    // 从哪里收集测试覆盖率
 //     'packages/**/src/**/*.{ts,tsx}',
 //     '!packages/**/src/types.{ts,tsx}',
 //     '!packages/env/**/*.{ts,tsx}',
@@ -62,7 +60,6 @@ module.exports = {
 //     '!packages/interactive/{background,keyboard}/**/*.{ts,tsx}',
 //   ],
 // };
-
 
 // 备注：
 //   Jest 配置解读： https://juejin.cn/post/7003595612977365028

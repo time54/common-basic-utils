@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-03-06 15:35:45
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-01-17 01:36:37
+ * @LastEditTime: 2025-04-09 20:42:52
  * @Description: 对象相关处理
  */
 
@@ -14,19 +14,18 @@
   obj2.b.c = 3;
   console.log(obj.b.c); // 2
  */
-  export function deepCopy<T>(obj: T): T {
-    // 如果不是对象，直接返回原始值
-    if (typeof obj !== 'object' || obj === null) {
-      return obj;
-    }
-    // 根据类型创建一个新对象
-    const result: any = Array.isArray(obj) ? [] : {};
-    // 递归拷贝每个属性
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        result[key] = deepCopy(obj[key]);
-      }
-    }
-    return result;
+export function deepCopy<T>(obj: T): T {
+  // 如果不是对象，直接返回原始值
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
   }
-  
+  // 根据类型创建一个新对象
+  const result: any = Array.isArray(obj) ? [] : {};
+  // 递归拷贝每个属性
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      result[key] = deepCopy(obj[key]);
+    }
+  }
+  return result;
+}

@@ -1,5 +1,13 @@
 {
-    "include": [ // 控制 TypeScript 编译器处理哪些文件
-        "packages/**/*.ts"
-    ]
+  "include": [
+    // 控制 TypeScript 编译器处理哪些文件
+    "packages/**/*.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@common-basic-utils/utils": ["./packages/utils/src"]
+    },
+    "lib": ["es2015", "dom"]
+  }
 }

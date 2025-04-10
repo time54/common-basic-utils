@@ -5,13 +5,13 @@
  * @LastEditTime: 2024-04-10 13:45:28
  * @Description: rollup 配置文件
  */
-import json from "rollup-plugin-json";
-import typescript from "@rollup/plugin-typescript";
-import pkg from "./package.json"
+import json from 'rollup-plugin-json';
+import typescript from '@rollup/plugin-typescript';
+import pkg from './package.json';
 
 export default {
   // 要打包文件的入口文件
-  input: "packages/utils/src/index.ts",
+  input: 'packages/utils/src/index.ts',
   /**
    * @description: 出口文件
    * umd模块：兼容的通用模式
@@ -24,7 +24,7 @@ export default {
       // 这样，在通过<script>标签引入时，才能通过name访问到export的内容。
       name: pkg.name,
       file: pkg.main,
-      format: "umd",
+      format: 'umd'
     },
     {
       file: pkg.common,
@@ -40,5 +40,5 @@ export default {
    * json(): 用于处理 JSON 文件，它允许你在 Rollup 中直接导入 JSON 文件，并将其转换为 JavaScript 对象
    * typescript(): 会在打包过程中处理 TypeScript 文件，并使用指定的选项进行编译
    */
-  plugins: [json(), typescript({ lib: ["es5", "es6", "dom"], target: "es5" })],
+  plugins: [json(), typescript({ lib: ['es5', 'es6', 'dom'], target: 'es5' })]
 };

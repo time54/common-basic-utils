@@ -39,4 +39,4 @@ describe('validatePhoneNumber', () => {
     const phoneNumber = '28888888888';
     expect(validatePhoneNumber(phoneNumber)).toBe(false);
   });
-}); 
+});

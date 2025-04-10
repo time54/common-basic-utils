@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-03-29 16:46:33
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-01-17 01:32:57
+ * @LastEditTime: 2025-04-09 20:12:35
  * @Description: 入参、出参参数格式转化
  */
 
@@ -35,21 +35,21 @@
   // }
   console.log(convertedObject);
  */
-  export function convertObjectKeysToUnderscore(obj: any): any {
-    if (typeof obj !== 'object' || obj === null) {
-      return obj;
-    }
-    const convertedObj: any = Array.isArray(obj) ? [] : {};
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const convertedKey = key.replace(/([A-Z])/g, '_$1').toLowerCase();
-        convertedObj[convertedKey] = convertObjectKeysToUnderscore(obj[key]);
-      }
-    }
-    return convertedObj;
+export function convertObjectKeysToUnderscore(obj: any): any {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
   }
-  
-  /**
+  const convertedObj: any = Array.isArray(obj) ? [] : {};
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const convertedKey = key.replace(/([A-Z])/g, '_$1').toLowerCase();
+      convertedObj[convertedKey] = convertObjectKeysToUnderscore(obj[key]);
+    }
+  }
+  return convertedObj;
+}
+
+/**
    * @description: 下划线转驼峰
    * @param {any} obj
    * @example
@@ -78,17 +78,16 @@
     // }
     console.log(convertedObject);
    */
-  export function convertObjectKeysToCamelCase(obj: any): any {
-    if (typeof obj !== 'object' || obj === null) {
-      return obj;
-    }
-    const result: any = Array.isArray(obj) ? [] : {};
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        const camelCaseKey = key.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
-        result[camelCaseKey] = convertObjectKeysToCamelCase(obj[key]);
-      }
-    }
-    return result;
+export function convertObjectKeysToCamelCase(obj: any): any {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
   }
-  
+  const result: any = Array.isArray(obj) ? [] : {};
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const camelCaseKey = key.replace(/_([a-z])/g, (match, letter) => letter.toUpperCase());
+      result[camelCaseKey] = convertObjectKeysToCamelCase(obj[key]);
+    }
+  }
+  return result;
+}

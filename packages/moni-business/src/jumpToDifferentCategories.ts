@@ -2,22 +2,24 @@
  * @Author: taojinchao
  * @Date: 2023-07-17 17:21:10
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-09 14:26:11
+ * @LastEditTime: 2025-04-09 20:38:31
  * @Description: 跳转不同的交易品类
  */
 
 import { callNativeAsync } from '@common-basic-utils/utils';
 import { DIFFERENT_CATEGORIES } from './types/enums';
 
-
 interface OptionsFutures {
   // 跳转类型 【股指期货：1 期货模拟：2 期货大赛：3】
-  type: DIFFERENT_CATEGORIES.STOCK_FUTURES | DIFFERENT_CATEGORIES.SIMULATION_FUTURES | DIFFERENT_CATEGORIES.FUTURES_COMPETITION;
+  type:
+  | DIFFERENT_CATEGORIES.STOCK_FUTURES
+  | DIFFERENT_CATEGORIES.SIMULATION_FUTURES
+  | DIFFERENT_CATEGORIES.FUTURES_COMPETITION;
   // 比赛id
   yybid?: string;
 }
 
-interface OptionsGMG{
+interface OptionsGMG {
   // 比赛id
   yybId: string;
   // 跳转类型 【港股：1 美股：2 】
@@ -101,7 +103,7 @@ const jumpToDifferentCategories: any = {
   },
   outsideFund: (yybId: string) => {
     moniJumpOutsideFund({ yybId });
-  },
+  }
 };
 
 export default jumpToDifferentCategories;
