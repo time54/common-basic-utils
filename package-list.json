@@ -1,0 +1,12 @@
+[
+  {
+    "name": "utils",
+    "from": "./packages/utils/src/index.ts",
+    "modules": ["es", "umd"]
+  },
+  {
+    "name": "moni-business",
+    "from": "./packages/moni-business/src/index.ts",
+    "modules": ["es", "umd"]
+  }
+]

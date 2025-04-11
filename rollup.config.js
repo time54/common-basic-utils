@@ -2,10 +2,10 @@
  * @Author: taojinchao
  * @Date: 2023-02-07 17:11:29
  * @LastEditors: taojinchao
- * @LastEditTime: 2024-04-10 13:45:28
+ * @LastEditTime: 2025-04-11 17:24:39
  * @Description: rollup 配置文件
  */
-import json from 'rollup-plugin-json';
+import json from '@rollup/plugin-json';
 import typescript from '@rollup/plugin-typescript';
 import pkg from './package.json';
 
@@ -40,5 +40,11 @@ export default {
    * json(): 用于处理 JSON 文件，它允许你在 Rollup 中直接导入 JSON 文件，并将其转换为 JavaScript 对象
    * typescript(): 会在打包过程中处理 TypeScript 文件，并使用指定的选项进行编译
    */
-  plugins: [json(), typescript({ lib: ['es5', 'es6', 'dom'], target: 'es5' })]
+  plugins: [
+    json(),
+    typescript({
+      // 使用项目中的 tsconfig.json
+      tsconfig: './tsconfig.json'
+    })
+  ]
 };

@@ -13,7 +13,11 @@
     "editor.formatOnSave": true
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   // 使用项目根目录的配置文件
@@ -23,4 +27,6 @@
   // 使用项目根目录的配置文件
   "prettier.useEditorConfig": false,
   "prettier.requireConfig": true,
-} 
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
+}
