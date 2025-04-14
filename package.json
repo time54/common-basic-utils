@@ -1,14 +1,10 @@
 {
   "name": "common-basic-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "基础函数库",
-  "main": "dist/index.umd.js",
-  "common": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
     "test": "jest",
@@ -16,7 +12,8 @@
     "build:prod": "cross-env NODE_ENV=production rollup -c",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
-    "format": "prettier --write \"**/*.{js,ts,json,md}\""
+    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
+    "publish:all": "npm run build:prod && lerna publish"
   },
   "repository": {
     "type": "git",
@@ -40,6 +37,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "jest": "^29.4.1",
+    "lerna": "^8.2.2",
     "minimist": "^1.2.8",
     "prettier": "^3.2.5",
     "rollup": "^2.32.0",

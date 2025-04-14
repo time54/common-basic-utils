@@ -1,8 +1,18 @@
 {
-  "name": "moni-business",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@common-basic-utils/moni-business",
+  "version": "1.0.2",
+  "description": "业务相关工具函数库",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.umd.js",
+    "index.es.js",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,8 +1,18 @@
 {
   "name": "@common-basic-utils/utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "基础工具函数库",
+  "main": "index.umd.js",
+  "module": "index.es.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "index.umd.js",
+    "index.es.js",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
