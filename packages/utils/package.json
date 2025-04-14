@@ -2,13 +2,11 @@
   "name": "@common-basic-utils/utils",
   "version": "1.0.5",
   "description": "基础工具函数库",
-  "main": "index.umd.js",
-  "module": "index.es.js",
-  "types": "types/index.d.ts",
+  "main": "lib/utils/index.umd.js",
+  "module": "lib/utils/index.es.js",
+  "types": "lib/utils/types/index.d.ts",
   "files": [
-    "index.umd.js",
-    "index.es.js",
-    "types"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"
