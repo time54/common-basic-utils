@@ -6,7 +6,7 @@
     "publish": {
       "ignoreChanges": ["*.md", "*.test.ts", "*.spec.ts"],
       "message": "chore(release): publish",
-      "registry": "https://registry.npmjs.org/"
+      "registry": "http://10.10.12.229:4873/"
     }
   }
 }

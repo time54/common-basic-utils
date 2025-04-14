@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-07-17 17:21:10
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-14 16:14:52
+ * @LastEditTime: 2025-04-14 16:35:57
  * @Description: 跳转不同的交易品类
  */
 
@@ -20,7 +20,6 @@ interface OptionsFutures {
 }
 
 interface OptionsGMG {
-  // 比赛id
   yybId: string;
   // 跳转类型 【港股：1 美股：2 】
   targetType: DIFFERENT_CATEGORIES.HK_STOCK | DIFFERENT_CATEGORIES.US_STOCK;
