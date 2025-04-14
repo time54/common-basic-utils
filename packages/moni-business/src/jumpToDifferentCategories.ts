@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-07-17 17:21:10
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-09 20:38:31
+ * @LastEditTime: 2025-04-14 15:59:31
  * @Description: 跳转不同的交易品类
  */
 
@@ -12,9 +12,9 @@ import { DIFFERENT_CATEGORIES } from './types/enums';
 interface OptionsFutures {
   // 跳转类型 【股指期货：1 期货模拟：2 期货大赛：3】
   type:
-    | DIFFERENT_CATEGORIES.STOCK_FUTURES
-    | DIFFERENT_CATEGORIES.SIMULATION_FUTURES
-    | DIFFERENT_CATEGORIES.FUTURES_COMPETITION;
+  | DIFFERENT_CATEGORIES.STOCK_FUTURES
+  | DIFFERENT_CATEGORIES.SIMULATION_FUTURES
+  | DIFFERENT_CATEGORIES.FUTURES_COMPETITION;
   // 比赛id
   yybid?: string;
 }
@@ -27,7 +27,6 @@ interface OptionsGMG {
 }
 
 interface OptionsFund {
-  // 比赛id
   yybId: string;
 }
 
