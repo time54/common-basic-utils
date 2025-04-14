@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-07-17 17:21:10
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-14 15:59:31
+ * @LastEditTime: 2025-04-14 16:14:52
  * @Description: 跳转不同的交易品类
  */
 
@@ -27,6 +27,7 @@ interface OptionsGMG {
 }
 
 interface OptionsFund {
+  // 比赛id
   yybId: string;
 }
 
