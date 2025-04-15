@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "publish-packages": "node scripts/publish.mjs"
+    "publish": "node scripts/publish.mjs"
   },
   "repository": {
     "type": "git",

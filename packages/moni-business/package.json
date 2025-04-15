@@ -1,6 +1,6 @@
 {
   "name": "@common-basic-utils/moni-business",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "业务相关工具函数库",
   "main": "lib/index.umd.js",
   "module": "lib/index.es.js",

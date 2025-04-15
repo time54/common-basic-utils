@@ -1,6 +1,6 @@
 {
   "name": "@common-basic-utils/utils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "基础工具函数库",
   "main": "lib/index.umd.js",
   "module": "lib/index.es.js",

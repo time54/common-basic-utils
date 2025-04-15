@@ -1,5 +1,11 @@
 # @common-basic-utils/utils
 
+## 1.0.12
+
+### Patch Changes
+
+- 测试
+
 ## 1.0.11
 
 ### Patch Changes
