@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2024-02-02 01:35:35
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-15 15:37:48
+ * @LastEditTime: 2025-04-15 17:15:43
  * @Description: 基础函数库
 -->
 
@@ -41,6 +41,13 @@ pnpm changeset version
 
 # 发布所有模块
 pnpm run publish
+
 # 发布指定模块
 pnpm run publish --pkg=utils
+```
+
+## 说明文档
+
+```bash
+pnpm run docs
 ```
