@@ -1,5 +1,21 @@
 # @common-basic-utils/moni-business
 
+## 1.0.15
+
+### Patch Changes
+
+- 更新构建配置，将构建产物直接输出到各个包目录
+- Updated dependencies
+  - @common-basic-utils/utils@1.0.11
+
+## 1.0.10
+
+### Patch Changes
+
+- 测试
+- Updated dependencies
+  - @common-basic-utils/utils@1.0.6
+
 ## 1.0.9
 
 ### Patch Changes

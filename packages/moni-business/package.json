@@ -1,10 +1,10 @@
 {
   "name": "@common-basic-utils/moni-business",
-  "version": "1.0.9",
+  "version": "1.0.15",
   "description": "业务相关工具函数库",
-  "main": "lib/moni-business/index.umd.js",
-  "module": "lib/moni-business/index.es.js",
-  "types": "lib/moni-business/types/index.d.ts",
+  "main": "lib/index.umd.js",
+  "module": "lib/index.es.js",
+  "types": "lib/types/index.d.ts",
   "files": [
     "lib"
   ],

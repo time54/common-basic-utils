@@ -51,14 +51,14 @@ const configs = packageConfigs.map(pkg => {
   if (pkg.modules.includes('es')) {
     output.push({
       // 指定打包后的文件路径和文件名
-      file: `lib/${pkg.name}/index.es.js`,
+      file: `packages/${pkg.name}/lib/index.es.js`,
       format: 'es'
     });
   }
 
   if (pkg.modules.includes('umd')) {
     output.push({
-      file: `lib/${pkg.name}/index.umd.js`,
+      file: `packages/${pkg.name}/lib/index.umd.js`,
       format: 'umd',
       name: pkg.name
     });
@@ -102,7 +102,7 @@ const configs = packageConfigs.map(pkg => {
   const dtsConfig = {
     input: pkg.from,
     output: {
-      file: `lib/${pkg.name}/types/index.d.ts`,
+      file: `packages/${pkg.name}/lib/types/index.d.ts`,
       format: 'es'
     },
     plugins: [dts()]
