@@ -38,7 +38,6 @@ async function publish() {
       process.exit(1);
     }
   }
-
   console.log('所有包发布完成！');
 }
 

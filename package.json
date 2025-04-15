@@ -13,7 +13,8 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "publish": "node scripts/publish.mjs"
+    "publish": "node scripts/publish.mjs",
+    "docs": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -46,9 +47,8 @@
     "rollup-plugin-strip": "^1.2.2",
     "ts-jest": "^29.0.5",
     "tslib": "^2.5.0",
+    "typedoc": "^0.28.2",
+    "typedoc-plugin-extras": "^4.0.0",
     "typescript": "^4.9.5"
-  },
-  "bin": {
-    "publish-packages": "./scripts/publish.mjs"
   }
 }

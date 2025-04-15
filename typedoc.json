@@ -1,0 +1,18 @@
+{
+  "name": "Common Basic Utils",
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./packages/utils/src/index.ts", "./packages/moni-business/src/index.ts"],
+  "tsconfig": "./tsconfig.json",
+  "out": "docs",
+  "disableSources": false,
+  "exclude": ["*.mock.ts", "*.test.ts"],
+  "includeVersion": true,
+
+  "plugin": ["typedoc-plugin-extras"],
+
+  // extra config
+  "customTitle": "Common Basic Utils",
+  "customDescription": "公共基础库",
+  "favicon": "https://foruda.gitee.com/images/1723603502796844527/03cdca2a_716974.gif",
+  "footerLastModified": true
+}
