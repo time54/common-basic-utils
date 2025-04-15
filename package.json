@@ -2,7 +2,7 @@
   "name": "common-basic-utils",
   "version": "1.0.3",
   "description": "基础函数库",
-  "private": true,
+  "private": false,
   "workspaces": [
     "packages/*"
   ],

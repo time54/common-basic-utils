@@ -1,5 +1,13 @@
 # @common-basic-utils/moni-business
 
+## 1.0.17
+
+### Patch Changes
+
+- 最终打包测试
+- Updated dependencies
+  - @common-basic-utils/utils@1.0.13
+
 ## 1.0.16
 
 ### Patch Changes

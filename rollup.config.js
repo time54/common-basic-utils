@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2023-02-07 17:11:29
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-14 14:28:40
+ * @LastEditTime: 2025-04-15 15:32:53
  * @Description: rollup 配置文件
  */
 import json from '@rollup/plugin-json';
@@ -79,7 +79,7 @@ const configs = packageConfigs.map(pkg => {
       targets: [
         {
           src: `packages/${pkg.name}/package.json`,
-          dest: `lib/${pkg.name}`
+          dest: `packages/${pkg.name}/lib`
         }
       ]
     })

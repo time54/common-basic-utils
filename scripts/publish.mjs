@@ -15,7 +15,7 @@ const packages = [
 ];
 
 async function publish() {
-  const registry = 'http://10.10.12.229:4873/';
+  const registry = 'https://registry.npmjs.org/';
 
   // 先构建
   console.log('开始构建...');
