@@ -11,6 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/time54/common-basic-utils.git",
+    "directory": "packages/moni-business"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
