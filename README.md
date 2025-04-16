@@ -2,7 +2,7 @@
  * @Author: taojinchao
  * @Date: 2024-02-02 01:35:35
  * @LastEditors: taojinchao
- * @LastEditTime: 2025-04-16 16:38:11
+ * @LastEditTime: 2025-04-16 17:20:53
  * @Description: 基础函数库
 -->
 
@@ -40,10 +40,10 @@ pnpm changeset
 pnpm changeset version
 
 # 发布所有模块
-pnpm run publish-pkgs
+pnpm publish -r
 
 # 发布指定模块
-pnpm run publish-pkgs --pkg=utils
+pnpm publish -r --filter @common-basic-utils/utils
 ```
 
 ## 说明文档

@@ -1,5 +1,11 @@
 # @common-basic-utils/utils
 
+## 1.0.16
+
+### Patch Changes
+
+- 发布到npm 源仓库测试
+
 ## 1.0.14
 
 ### Patch Changes

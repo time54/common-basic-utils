@@ -13,7 +13,6 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "publish-pkgs": "node scripts/publish.mjs",
     "docs": "typedoc"
   },
   "repository": {

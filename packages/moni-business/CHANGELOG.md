@@ -1,5 +1,13 @@
 # @common-basic-utils/moni-business
 
+## 1.0.20
+
+### Patch Changes
+
+- 发布到npm 源仓库测试
+- Updated dependencies
+  - @common-basic-utils/utils@1.0.16
+
 ## 1.0.18
 
 ### Patch Changes
