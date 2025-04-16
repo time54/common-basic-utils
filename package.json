@@ -1,8 +1,8 @@
 {
   "name": "common-basic-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "基础函数库",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "publish": "node scripts/publish.mjs",
+    "publish-pkgs": "node scripts/publish.mjs",
     "docs": "typedoc"
   },
   "repository": {
